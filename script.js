@@ -8,7 +8,7 @@ let fullScreen = false;
 function connect() {
     const ip = document.getElementById('ip').value;
     const password = document.getElementById('password').value;
-    socket = new WebSocket(`ws://${ip}:8765`);
+    socket = new WebSocket(`wss://${ip}:8765`);
 
     socket.onopen = function(e) {
         console.log("[open] Connection established");
